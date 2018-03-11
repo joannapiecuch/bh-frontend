@@ -3,9 +3,7 @@ import {Field} from 'redux-form';
 import PropTypes from 'prop-types';
 import DatePicker from '../../shared/form/fields/DatePicker';
 import Input from '../../shared/form/fields/Input';
-import {required} from '../../shared/form/validation/validation';
-import {validEmail} from '../../shared/form/validation/validation';
-
+import {required, validEmail} from '../../shared/form/validation/validation';
 
 class MemberSignupComponent extends Component {
   render() {

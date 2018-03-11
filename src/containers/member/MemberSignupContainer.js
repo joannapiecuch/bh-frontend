@@ -1,7 +1,7 @@
-import {reset, reduxForm } from 'redux-form';
+import {reset, reduxForm} from 'redux-form';
 import MemberSignupComponent from '../../components/member/MemberSignupComponent';
 import {memberSignup} from '../../redux/actions/memberSignupAction';
-import { success } from 'react-notification-system-redux';
+import {success} from 'react-notification-system-redux';
 
 const MemberSignupContainer = reduxForm(
   {
@@ -14,7 +14,7 @@ const MemberSignupContainer = reduxForm(
         message: 'Thank you for signing up on our event.'
       }))
     }
-}
+  }
 )(MemberSignupComponent);
 
 export default MemberSignupContainer;

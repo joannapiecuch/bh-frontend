@@ -3,8 +3,8 @@ import React from 'react'
 import {Provider} from 'react-redux'
 import {reducer as formReducer} from 'redux-form'
 import {createStore, combineReducers, compose, applyMiddleware} from 'redux'
-import { apiMiddleware } from 'redux-api-middleware';
-import { devToolsEnhancer } from 'redux-devtools-extension';
+import {apiMiddleware} from 'redux-api-middleware';
+import {devToolsEnhancer} from 'redux-devtools-extension';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import './index.css';
 import AppContainer from './containers/app/AppContainer';

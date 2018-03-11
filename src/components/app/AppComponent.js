@@ -12,7 +12,7 @@ class AppComponent extends Component {
           notifications={notifications}
         />
         <div className="container">
-          <h2 className="title">Signup on our event</h2>
+          <h2 className="title-page">Signup on our event</h2>
           <MemberSignupContainer/>
         </div>
       </div>
