@@ -7,16 +7,18 @@ import { apiMiddleware } from 'redux-api-middleware';
 import { devToolsEnhancer } from 'redux-devtools-extension';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import './index.css';
-import App from './App';
+import App from './containers/app/App';
 import registerServiceWorker from './registerServiceWorker';
+import {errorMiddleware} from './redux/middlewares/errorMiddleware';
+import {reducer as notifications} from 'react-notification-system-redux';
 
 
 const rootReducer = combineReducers({
-  form: formReducer
+  form: formReducer,
+  notifications
 });
 
-const middlewares = compose(applyMiddleware(apiMiddleware), devToolsEnhancer());
-
+const middlewares = compose(applyMiddleware(apiMiddleware, errorMiddleware), devToolsEnhancer());
 const store = createStore(rootReducer, {}, middlewares);
 
 
