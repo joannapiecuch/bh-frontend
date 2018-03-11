@@ -1,9 +1,9 @@
 import {reset, reduxForm } from 'redux-form';
-import MemberSignupComponent from '../../components/member/MemberSignup';
+import MemberSignupComponent from '../../components/member/MemberSignupComponent';
 import {memberSignup} from '../../redux/actions/memberSignupAction';
 import { success } from 'react-notification-system-redux';
 
-const MemberSignup = reduxForm(
+const MemberSignupContainer = reduxForm(
   {
     form: 'member',
     onSubmit: (data, dispatch) => dispatch(memberSignup(data)),
@@ -17,4 +17,4 @@ const MemberSignup = reduxForm(
 }
 )(MemberSignupComponent);
 
-export default MemberSignup;
+export default MemberSignupContainer;

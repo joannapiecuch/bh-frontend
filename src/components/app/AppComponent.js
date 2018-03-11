@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import './App.css';
-import MemberSignup from '../../containers/member/MemberSignup';
+import MemberSignupContainer from '../../containers/member/MemberSignupContainer';
 import Notifications from 'react-notification-system-redux';
 
-class App extends Component {
+class AppComponent extends Component {
   render() {
     const {notifications} = this.props;
     return (
@@ -13,11 +13,11 @@ class App extends Component {
         />
         <div className="container">
           <h2 className="title">Signup on our event</h2>
-          <MemberSignup/>
+          <MemberSignupContainer/>
         </div>
       </div>
     );
   }
 }
 
-export default App;
+export default AppComponent;

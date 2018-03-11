@@ -7,7 +7,7 @@ import { apiMiddleware } from 'redux-api-middleware';
 import { devToolsEnhancer } from 'redux-devtools-extension';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import './index.css';
-import App from './containers/app/App';
+import AppContainer from './containers/app/AppContainer';
 import registerServiceWorker from './registerServiceWorker';
 import {errorMiddleware} from './redux/middlewares/errorMiddleware';
 import {reducer as notifications} from 'react-notification-system-redux';
@@ -24,7 +24,7 @@ const store = createStore(rootReducer, {}, middlewares);
 
 ReactDOM.render(
   <Provider store={store}>
-    <App/>
+    <AppContainer/>
   </Provider>,
   document.getElementById('root')
 );

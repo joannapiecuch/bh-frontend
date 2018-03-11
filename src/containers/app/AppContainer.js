@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
-import App from '../../components/app/App';
+import AppComponent from '../../components/app/AppComponent';
 
 export default connect(
   state => ({ notifications: state.notifications })
-)(App);
+)(AppComponent);
